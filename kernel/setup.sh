@@ -42,7 +42,7 @@ setup_kernelsu() {
 	echo "[+] Setting up KernelSU..."
 	# Clone the repository and rename it to KernelSU
 	if [ ! -d "$GKI_ROOT/KernelSU" ]; then
-		git clone https://github.com/ReSukiSU/ReSukiSU KernelSU
+		git clone https://github.com/der-meddler/ReSukiSU-pers-fork KernelSU
 		echo "[+] Repository cloned."
 	fi
 	cd "$GKI_ROOT/KernelSU"
@@ -84,7 +84,7 @@ setup_submodule() {
 	fi
 
     echo '[+] Setting up KernelSU as submodule...'
-    git submodule add https://github.com/ReSukiSU/ReSukiSU KernelSU || echo '[!] Failed to add KernelSU as a submodule.'
+    git submodule add https://github.com/der-meddler/ReSukiSU-pers-fork KernelSU || echo '[!] Failed to add KernelSU as a submodule.'
     echo '[+] Done.'
 }
 
