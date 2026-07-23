@@ -40,7 +40,7 @@ ccflags-y += -DKSU_OPTIONAL_SELINUX_CRED
 endif
 
 # seccomp_types.h was added in 6.7
-ifeq ($(shell grep -q "atomic_t\s\+filter_count" $(srctree)/include/linux/seccomp.h $(srctree)/include/linux/seccomp_types.h; echo $$?),0)
+ifeq ($(shell grep -q "atomic_t\s\+filter_count" $(srctree)/include/linux/seccomp.h; echo $$?),0)
 $(info -- $(REPO_NAME)/compat: seccomp_filter_count found)
 ccflags-y += -DKSU_OPTIONAL_SECCOMP_FILTER_CNT
 endif
